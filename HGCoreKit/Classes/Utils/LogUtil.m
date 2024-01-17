@@ -26,7 +26,7 @@ static BOOL kLogEnable = NO;
 + (void)customLogWithFunction:(const char *)function lineNumber:(int)lineNumber formatString:(NSString *)formatString {
     if ([self getLogEnable]) {
         // 开启了Log
-        NSLog(@"☘️%@", formatString);
+        NSLog(@"☘️ %@", formatString);
     }
 }
 
