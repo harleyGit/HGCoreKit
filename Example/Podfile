@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '10.0'
+
+target 'HGCoreKit_Example' do
+  pod 'HGCoreKit', :path => '../'
+
+  target 'HGCoreKit_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
