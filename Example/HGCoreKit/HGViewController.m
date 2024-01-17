@@ -8,16 +8,18 @@
 
 #import "HGViewController.h"
 
+#import <LogUtil.h>
+
 @interface HGViewController ()
 
 @end
 
 @implementation HGViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad{
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	
+    [LogUtil debugLog:@"测试打印类"];
 }
 
 - (void)didReceiveMemoryWarning

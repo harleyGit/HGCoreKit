@@ -37,7 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2CE73D3EF665D7CF3AB7E2B1 /* HGCoreKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = HGCoreKit.podspec; path = ../HGCoreKit.podspec; sourceTree = "<group>"; };
+		2CE73D3EF665D7CF3AB7E2B1 /* HGCoreKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = HGCoreKit.podspec; path = ../HGCoreKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		45B70B48D524197A5A63B359 /* Pods-HGCoreKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HGCoreKit_Example.debug.xcconfig"; path = "Target Support Files/Pods-HGCoreKit_Example/Pods-HGCoreKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		46676B0652533A58F56F3F72 /* Pods-HGCoreKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HGCoreKit_Tests.release.xcconfig"; path = "Target Support Files/Pods-HGCoreKit_Tests/Pods-HGCoreKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		52E745DA1D5BD8449DF6A3D6 /* Pods_HGCoreKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HGCoreKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,9 +62,9 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9EC4369D9AE9367149BAC4C5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		9EC4369D9AE9367149BAC4C5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		ABD5B2257487BCC3402AA646 /* Pods-HGCoreKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HGCoreKit_Example.release.xcconfig"; path = "Target Support Files/Pods-HGCoreKit_Example/Pods-HGCoreKit_Example.release.xcconfig"; sourceTree = "<group>"; };
-		E6910F28741645F4F70240A2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		E6910F28741645F4F70240A2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		EA0258E18CCE42489338E004 /* Pods_HGCoreKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HGCoreKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA54AA91711245B3D3FBDA5C /* Pods-HGCoreKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HGCoreKit_Tests.debug.xcconfig"; path = "Target Support Files/Pods-HGCoreKit_Tests/Pods-HGCoreKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,7 +103,6 @@
 				FA54AA91711245B3D3FBDA5C /* Pods-HGCoreKit_Tests.debug.xcconfig */,
 				46676B0652533A58F56F3F72 /* Pods-HGCoreKit_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -258,6 +257,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -497,6 +497,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HGCoreKit/HGCoreKit-Prefix.pch";
 				INFOPLIST_FILE = "HGCoreKit/HGCoreKit-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -513,6 +514,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HGCoreKit/HGCoreKit-Prefix.pch";
 				INFOPLIST_FILE = "HGCoreKit/HGCoreKit-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
