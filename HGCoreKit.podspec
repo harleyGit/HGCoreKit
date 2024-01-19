@@ -25,18 +25,20 @@ TODO: Add long description of the pod here.
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'harleyGit' => 'harelysoa@qq.com' }
-  s.source           = { :git => 'https://github.com/harleyGit/HGCoreKit.git', :tag => '0.1.0' }
+  s.source           = { :git => 'https://github.com/harleyGit/HGCoreKit.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '10.0'
 
-  s.source_files = 'HGCoreKit/Classes/**/*'
+  s.source_files = 'HGCoreKit/Classes/**/*.{h,m,mm}'
+  # 暴露公共头文件,若是没有这些则默认为s.source_files里的文件
+  s.public_header_files = 'HGCoreKit/Classes/{HGCoreKit,HGCoreKitDefines}.h'
+  s.prefix_header_file = './HGCoreKitPrefixHeader.pch'
   
   # s.resource_bundles = {
   #   'HGCoreKit' => ['HGCoreKit/Assets/*.png']
   # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 end

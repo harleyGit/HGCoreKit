@@ -1,0 +1,18 @@
+//
+//  HGCoreKitPrefixHeader.pch
+//  HGCoreKit
+//
+//  Created by Harley Huang on 19/1/2024.
+//
+
+#ifndef HGCoreKitPrefixHeader_pch
+#define HGCoreKitPrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+#import "HGCoreKitDefines.h"
+
+
+#endif /* HGCoreKitPrefixHeader_pch */
