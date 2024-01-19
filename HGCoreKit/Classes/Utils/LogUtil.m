@@ -23,7 +23,9 @@ static BOOL kLogEnable = NO;
 }
 
 // 日志输出方法
-+ (void)customLogWithFunction:(const char *)function lineNumber:(int)lineNumber formatString:(NSString *)formatString {
++ (void)customLogWithFunction:(const char *)function
+                   lineNumber:(int)lineNumber
+                 formatString:(NSString *)formatString {
     if ([self getLogEnable]) {
         // 开启了Log
         NSLog(@"☘️ %@", formatString);
@@ -31,13 +33,20 @@ static BOOL kLogEnable = NO;
 }
 
 + (void)debugLog:(NSString *)format, ... {
-  @autoreleasepool {
-    va_list args;
-    va_start(args, format);
-    NSString *str = [[NSString alloc] initWithFormat:format arguments:args];
-    NSLog(@"%@", str);
-    va_end(args);
-  }
+    @autoreleasepool {
+        //这是一个用于处理变参参数的 va_list 类型的变量
+        va_list args;
+        
+        //这个宏会初始化 va_list 类型的变量，使其指向参数列表中的第一个变参。
+        //在这里，它将 args 初始化为指向 format 后的第一个变参
+        va_start(args, format);
+        
+        NSString *str = [[NSString alloc] initWithFormat:format arguments:args];
+        NSLog(@"%@", str);
+        
+        //这个宏用于清理 va_list，在使用 va_start 初始化后，必须调用 va_end 来确保资源被正确释放
+        va_end(args);
+    }
 }
 
 @end

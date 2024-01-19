@@ -32,8 +32,12 @@ NS_ASSUME_NONNULL_BEGIN
 + (BOOL)getLogEnable;
 
 // 日志输出方法
-+ (void)customLogWithFunction:(const char *)function lineNumber:(int)lineNumber formatString:(NSString *)formatString;
++ (void)customLogWithFunction:(const char *)function
+                   lineNumber:(int)lineNumber
+                 formatString:(NSString *)formatString;
 
+///NS_FORMAT_FUNCTION(1,2) 表示第一个参数是格式化字符串（从1开始计数），而第二个参数是变参参数（从2开始计数）。
+///这样可以让编译器在编译时检查格式化字符串和参数是否匹配。
 + (void)debugLog:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2);
 
 
