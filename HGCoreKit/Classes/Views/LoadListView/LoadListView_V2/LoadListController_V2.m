@@ -186,7 +186,7 @@
     if (self.isHeaderRefreshing) {
         return;
     }
-    offsetY = -(getRectNavAndStatusHight + self.headerLabel.bounds.size.height);
+    offsetY = -(UINAV_HEIGHT + self.headerLabel.bounds.size.height);
     
     if (self.tableView.contentOffset.y < offsetY) {
         self.headerLabel.text = @"松开立即刷新";

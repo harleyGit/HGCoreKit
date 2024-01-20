@@ -47,5 +47,14 @@ TODO: Add long description of the pod here.
 
   #指定依赖的系统库,避免链接错误
   s.frameworks = 'UIKit', 'Foundation'
-  # s.dependency 'AFNetworking', '~> 2.3'
+
+  #依赖第三方库
+  s.dependency 'AFNetworking', '4.0.1'
+  s.dependency 'MJExtension', '3.4.1'
+  s.dependency 'SDWebImage', '5.7.3'
+  s.dependency 'MBProgressHUD', '1.0.0'
+  #s.dependency 'WechatOpenSDK-XCFramework', '2.0.2'
+  s.dependency 'SocketRocket', '0.5.1'
+  s.dependency 'FMDB', '2.7.5'
+  s.dependency 'MJRefresh', '3.1.15.7'
 end

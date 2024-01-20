@@ -15,6 +15,18 @@
     return [self displayViewController:[self displayWindow].rootViewController ignorePresent:NO];
 }
 
+// add不忽略模态化
++ (UIViewController *)topViewController {
+    UIViewController *resultVC;
+    UIWindow *keyWindow = [self displayWindow];
+    
+    resultVC = [self _topViewController:[keyWindow rootViewController]];
+    while (resultVC.presentedViewController) {
+        resultVC = [self _topViewController:resultVC.presentedViewController];
+    }
+    return resultVC;
+}
+
 + (UIViewController *)displayViewController:(id)currentViewController ignorePresent:(BOOL)ignorePresent{
     if ([currentViewController isKindOfClass:[UINavigationController class]]){
         return [self displayViewController:[[currentViewController viewControllers] lastObject] ignorePresent:ignorePresent];
@@ -94,16 +106,6 @@
 
 + (UIViewController *)topOfRootViewController{
     return [self displayViewController:[self displayWindow].rootViewController ignorePresent:YES];
-}
-
-// add   不忽略模态化
-+ (UIViewController *)topViewController{
-    UIViewController *resultVC;
-    resultVC = [self _topViewController:[[UIApplication sharedApplication].keyWindow rootViewController]];
-    while (resultVC.presentedViewController) {
-        resultVC = [self _topViewController:resultVC.presentedViewController];
-    }
-    return resultVC;
 }
 
 + (UIViewController *)_topViewController:(UIViewController *)vc {

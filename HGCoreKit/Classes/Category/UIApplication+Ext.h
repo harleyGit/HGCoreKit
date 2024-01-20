@@ -20,6 +20,9 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (UIViewController *)displayViewController;
 
+/// 当前正在显示的 viewController， 不忽略模态弹出
++ (UIViewController *)topViewController;
+
 /**
  当前正在显示的 window
  

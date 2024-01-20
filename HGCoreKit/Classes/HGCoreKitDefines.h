@@ -16,11 +16,16 @@
 #define SCREEN_HEIGHT           [UIScreen mainScreen].bounds.size.height//视图的高
 
 //状态栏高度
-#define kStatusBarHeight [UIApplication sharedApplication].statusBarFrame.size.height
+#define UISTATUS_BAR_HEIGHT [UIApplication sharedApplication].statusBarFrame.size.height
+///#define UISTATUS_BAR_HEIGHT ([[UIScreen  mainScreen] statusBarHeight])
+
 //Navigation高度
-#define kNaviBarHeight [UINavigationBar appearance].frame.size.height
+#define HGNAVIGATIONBAR_HEIGHT [UINavigationBar appearance].frame.size.height
 //导航栏高度
-#define getRectNavAndStatusHight  self.navigationController.navigationBar.frame.size.height+[[UIApplication sharedApplication] statusBarFrame].size.height
+///#define HGNAVIGATIONBAR_HEIGHT  44.0f
+
+///状态栏高度+导航栏高度
+#define UINAV_HEIGHT (UISTATUS_BAR_HEIGHT + HGNAVIGATIONBAR_HEIGHT)
 
 
 //判断是否为iPhone Xz及以上的机型
@@ -41,9 +46,22 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 
 //tabbar的高度
 #define kTabBarHeight [[UITabBarController alloc]init].tabBar.frame.size.height
+#define UITAB_HEIGHT ([[UIScreen mainScreen] isiPhoneX] ? 83 : 49)
+
+///底部安全距离
+#define UITAB_SAFEDISTANCE ([[UIScreen mainScreen] isiPhoneX] ? 34 : 0)
 
 //tabbar的高度(含iPhone X系列)
 #define kTabBarHeight_X (IPHONE_X ? (kTabBarHeight + 34) : kTabBarHeight)
+
+#define BlockSafeRun(block, ...) block ? block(__VA_ARGS__) : nil
+
+#define dispatch_main_async_safe(block)\
+if ([NSThread isMainThread]) {\
+block();\
+} else {\
+dispatch_async(dispatch_get_main_queue(), block);\
+}
 
 ///strongify和weakify实现原理:https://www.cnblogs.com/chaoguo1234/p/16029469.html
 //#define strongify_self(...) \

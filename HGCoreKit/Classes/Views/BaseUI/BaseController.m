@@ -7,7 +7,7 @@
 /// 导航栏透明问题:https://www.cnblogs.com/eric-zhangy1992/p/15571539.html
 
 #import "BaseController.h"
-#import "UIImage+Util.h"
+#import "UIImage+Ext.h"
 
 @interface BaseController ()
 
