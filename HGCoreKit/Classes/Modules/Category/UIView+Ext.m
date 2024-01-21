@@ -13,6 +13,18 @@
 static UIColor *_defaultMainColor = nil;
 @dynamic defaultMainColor;
 
++ (UIViewController *)controllerOfView:(UIView *)view {
+    // 遍历响应者链。返回第一个找到视图控制器
+    UIResponder *responder = view;
+    while ((responder = [responder nextResponder])){
+        if ([responder isKindOfClass: [UIViewController class]]){
+            return (UIViewController *)responder;
+        }
+    }
+    // 如果没有找到则返回nil
+    return nil;
+}
+
 +(UIColor *)defaultMainColor {
     if(!_defaultMainColor){
         _defaultMainColor = [UIColor colorWithRed:240/255.0f green:239/255.0f blue:246/255.0f alpha:1.0f];

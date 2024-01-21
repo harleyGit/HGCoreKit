@@ -28,6 +28,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// 高度
 @property(nonatomic,assign) CGFloat hg_height;
 
+/// 获取当前View所在的视图控制器
++ (UIViewController *)controllerOfView:(UIView *)view;
 
 + (UIView *)topFullScreenView;
 
