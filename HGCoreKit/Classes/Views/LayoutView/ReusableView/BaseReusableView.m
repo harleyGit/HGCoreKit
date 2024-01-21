@@ -19,6 +19,22 @@
 
 @implementation BaseReusableView
 
+- (instancetype)initWithFrame:(CGRect)frame{
+    self = [super initWithFrame:frame];
+    if (self) {
+        self.backgroundColor = [UIColor whiteColor];
+        
+        [self addHeaderOrFooterSubViews];
+    }
+    return self;
+}
+
+- (void)bindHeadOrFooterModelData:(BaseReusableViewM *)modelData {}
+
+- (void)addHeaderOrFooterSubViews {}
+
+
+
 - (UILabel *)titleLab {
     if (!_titleLab) {
         _titleLab = [[UILabel alloc] init];
@@ -28,19 +44,4 @@
     }
     return _titleLab;
 }
-
-- (instancetype)initWithFrame:(CGRect)frame{
-    self = [super initWithFrame:frame];
-    if (self) {
-        self.backgroundColor = [UIColor whiteColor];
-        [self layoutHeaderOrFooterSubViews];
-    }
-    return self;
-}
-
-- (void)bindHeadOrFooterModelData:(BaseReusableViewM *)modelData {}
-
-- (void) layoutHeaderOrFooterSubViews {}
-
-
 @end

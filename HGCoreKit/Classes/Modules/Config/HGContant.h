@@ -24,6 +24,8 @@ UIKIT_EXTERN NSString* _Nullable const GlobalFontName1;
 UIKIT_EXTERN NSString* _Nullable const GlobalFontName2;
 UIKIT_EXTERN NSString* _Nullable const GlobalFontName3;
 UIKIT_EXTERN NSString* _Nullable const GlobalFontName4;
+UIKIT_EXTERN NSString* _Nullable const GlobalFontName5;
+
 
 
 /// 网络请求回调

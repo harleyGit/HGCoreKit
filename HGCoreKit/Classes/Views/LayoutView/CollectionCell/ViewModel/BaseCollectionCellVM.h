@@ -39,7 +39,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 选择cell
 /// @param indexPath 索引路径
-- (void) selectAtIndexPath:(NSIndexPath *)indexPath model:(nullable id<BaseCCellProtocol>)model;
+- (void) selectAtIndexPath:(NSIndexPath *)indexPath
+                     model:(nullable id<BaseCCellProtocol>)model;
 
 @end
 

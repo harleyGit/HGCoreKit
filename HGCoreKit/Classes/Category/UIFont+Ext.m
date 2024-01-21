@@ -14,15 +14,15 @@
 }
 
 + (UIFont *)boldFontOfSize:(CGFloat)fontSize {
-    return [UIFont fontWithName:GlobalFontName4 size:fontSize];
+    return [UIFont fontWithName:GlobalFontName5 size:fontSize];
 }
 
 + (UIFont *)charFontOfSize:(CGFloat)fontSize {
-    return [UIFont fontWithName:GlobalFontName2 size:fontSize];
+    return [UIFont fontWithName:@"GillSans" size:fontSize];
 }
 
 + (UIFont *)charBoldFontOfSize:(CGFloat)fontSize {
-    return [UIFont fontWithName:GlobalFontName4 size:fontSize];
+    return [UIFont fontWithName:@"GillSans-Boldtalic" size:fontSize];
 }
 
 @end

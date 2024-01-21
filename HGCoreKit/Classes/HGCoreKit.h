@@ -25,6 +25,8 @@
 
 
 #pragma mark -- Category
+#import "UIView+Ext.h"
+#import "UIFont+Ext.h"
 #import "UIImage+Ext.h"
 #import "ButtnLayoutUtil.h"
 

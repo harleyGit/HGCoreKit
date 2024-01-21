@@ -34,7 +34,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 /// 子视图布局
-- (void)layoutCellContentSubViews;
+- (void)addCellSubViews;
 
 /// 绑定model数据
 /// @param modelData modelData

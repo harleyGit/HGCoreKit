@@ -24,7 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)bindHeadOrFooterModelData:(BaseReusableViewM *)modelData;
 
 /// 子视图布局
-- (void) layoutHeaderOrFooterSubViews;
+- (void) addHeaderOrFooterSubViews;
 
 @end
 

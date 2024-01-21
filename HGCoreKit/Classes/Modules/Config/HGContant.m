@@ -12,12 +12,12 @@ const CGFloat GlobalMarginLeft = 16.0f;
 const CGFloat GlobalMarginBottom = 16.0f;
 const CGFloat GlobalMarginRight = 16.0f;
 
-NSString* const GlobalFontName0 = @"PingFangTC-Semibold";
-NSString* const GlobalFontName1 = @"PingFangTC-Medium";
-NSString* const GlobalFontName2 = @"PingFangTC-Regular";
-NSString* const GlobalFontName3 = @"PingFangTC-Light";
-NSString* const GlobalFontName4 = @"PingFangTC-Thin";
-NSString* const GlobalFontName5 = @"PingFangTC-Ultralight";
+NSString* const GlobalFontName5 = @"PingFangTC-Semibold";
+NSString* const GlobalFontName4 = @"PingFangTC-Medium";
+NSString* const GlobalFontName3 = @"PingFangTC-Regular";
+NSString* const GlobalFontName2 = @"PingFangTC-Light";
+NSString* const GlobalFontName1 = @"PingFangTC-Thin";
+NSString* const GlobalFontName0 = @"PingFangTC-Ultralight";
 
 NSString * const TEST_NOTIFY_NAME = @"com.alamofire.networking.task.resume";
 

@@ -16,21 +16,12 @@
 
 @implementation BaseCollectionCell
 
--(UILabel *)titleLab {
-    if (!_titleLab) {
-        _titleLab = [[UILabel alloc] init];
-        _titleLab.font = [UIFont fontWithName:GlobalFontName1 size:18.0f];
-        _titleLab.textColor = [UIColor blackColor];
-        _titleLab.textAlignment = NSTextAlignmentCenter;
-    }
-    return _titleLab;
-}
-
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
         self.contentView.backgroundColor = [UIColor whiteColor];
-        [self layoutCellContentSubViews];
+        
+        [self addCellSubViews];
     }
     
     return self;
@@ -41,6 +32,20 @@
 - (void)bindCellModdelData:(id)modelData{}
 - (void)selectCellWithIndexPath:(NSIndexPath *)indexPath model:(id)model{}
 
-- (void)layoutCellContentSubViews {}
+- (void)addCellSubViews {}
+
+
+
+#pragma mark -- Set & Get
+-(UILabel *)titleLab {
+    if (!_titleLab) {
+        _titleLab = [[UILabel alloc] init];
+        _titleLab.font = [UIFont fontWithName:GlobalFontName3 size:18.0f];
+        _titleLab.textColor = [UIColor blackColor];
+        _titleLab.textAlignment = NSTextAlignmentLeft;
+    }
+    return _titleLab;
+}
+
 
 @end
