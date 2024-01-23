@@ -13,6 +13,7 @@
 
 
 #pragma mark -- Manager
+#import "HGFileManager.h"
 #import "HGRouteHandle.h"
 
 

@@ -16,8 +16,7 @@
 #define SCREEN_HEIGHT           [UIScreen mainScreen].bounds.size.height//视图的高
 
 //状态栏高度
-#define UISTATUS_BAR_HEIGHT [UIApplication sharedApplication].statusBarFrame.size.height
-///#define UISTATUS_BAR_HEIGHT ([[UIScreen  mainScreen] statusBarHeight])
+#define UISTATUS_BAR_HEIGHT [UIApplication statusBarHeight]
 
 //Navigation高度
 #define HGNAVIGATIONBAR_HEIGHT [UINavigationBar appearance].frame.size.height
@@ -26,6 +25,13 @@
 
 ///状态栏高度+导航栏高度
 #define UINAV_HEIGHT (UISTATUS_BAR_HEIGHT + HGNAVIGATIONBAR_HEIGHT)
+
+//tabbar的高度
+#define kTabBarHeight [[UITabBarController alloc]init].tabBar.frame.size.height
+#define UITAB_HEIGHT ([[UIScreen mainScreen] isiPhoneX] ? 83 : 49)
+
+///底部安全距离
+#define UITAB_SAFEDISTANCE [UIApplication bottomSafeAreaHeight]
 
 
 //判断是否为iPhone Xz及以上的机型
@@ -43,13 +49,6 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 #define is_iPhone5 (kScreenW ==320&& kScreenH ==568.f)
 #define is_iPhone5_OR_LESS (kScreenW ==320&& kScreenH <=568.f)
 
-
-//tabbar的高度
-#define kTabBarHeight [[UITabBarController alloc]init].tabBar.frame.size.height
-#define UITAB_HEIGHT ([[UIScreen mainScreen] isiPhoneX] ? 83 : 49)
-
-///底部安全距离
-#define UITAB_SAFEDISTANCE ([[UIScreen mainScreen] isiPhoneX] ? 34 : 0)
 
 //tabbar的高度(含iPhone X系列)
 #define kTabBarHeight_X (IPHONE_X ? (kTabBarHeight + 34) : kTabBarHeight)

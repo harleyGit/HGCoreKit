@@ -8,8 +8,31 @@
 
 #import "UIApplication+Ext.h"
 #import "UIViewController+Child.h"
+#import "UIScreen+Ext.h"
 
 @implementation UIApplication (Ext)
+
++ (CGFloat)statusBarHeight {
+    CGFloat statusBarHeight = 0;
+
+    if (@available(iOS 13.0, *)) {
+        statusBarHeight = [[[UIApplication sharedApplication] keyWindow] windowScene].statusBarManager.statusBarFrame.size.height;
+    } else {
+        statusBarHeight = [[UIApplication sharedApplication] statusBarFrame].size.height;
+    }
+    
+    return statusBarHeight;
+}
+
++ (CGFloat)bottomSafeAreaHeight {
+    CGFloat bottomSafeAreaHeight = 0;
+
+    if (@available(iOS 11.0, *)) {
+        bottomSafeAreaHeight = [[[UIApplication sharedApplication] keyWindow] safeAreaInsets].bottom;
+    }
+    return bottomSafeAreaHeight;
+}
+
 
 + (UIViewController *)displayViewController{
     return [self displayViewController:[self displayWindow].rootViewController ignorePresent:NO];

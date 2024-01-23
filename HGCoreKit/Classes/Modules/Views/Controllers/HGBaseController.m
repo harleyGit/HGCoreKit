@@ -164,11 +164,11 @@ UIGestureRecognizerDelegate>{
                              failBlock:(CompleteCallBack)failBlock {}
 
 - (BOOL) forbidRefreshData {
-    return NO;
+    return YES;
 }
 
 - (BOOL) forbidLoadMoreData {
-    return NO;
+    return YES;
 }
 
 - (void) lv_sectionHeaderActionType:(NSInteger)actionType

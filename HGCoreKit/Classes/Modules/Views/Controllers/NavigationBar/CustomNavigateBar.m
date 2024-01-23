@@ -33,7 +33,7 @@ NSInteger const BTN_RIGHT_TAG = 420;
 
 - (instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]){
-        _sy = [[UIScreen mainScreen] statusBarHeight];
+        _sy = [UIApplication statusBarHeight];
         _nH = self.hg_height - _sy;
         _showCloseBtn = NO;
         self.backgroundColor = [UIColor colorFromHexCode:@"#000205"];
@@ -82,7 +82,7 @@ NSInteger const BTN_RIGHT_TAG = 420;
     
     
     CGFloat titW = [TxtUtil widthForStr:self.titleLab.text font:self.titleLab.font height:44];
-    CGFloat titY = [UIScreen statusBarHeight] + ([UIScreen navigationBarHeight] - 44)/2;
+    CGFloat titY = [UIApplication statusBarHeight] + ([UIScreen navigationBarHeight] - 44)/2;
     self.titleLab.frame = CGRectMake(([UIScreen getScreenWidth] - titW)/2, titY, titW, 44);
 }
 
@@ -114,7 +114,7 @@ NSInteger const BTN_RIGHT_TAG = 420;
 - (void)layoutCNavionContentView {
     UIView *contentV = [self.delegate navionCustomContentView];
     if(contentV){
-        [contentV setHg_y:[UIScreen statusBarHeight]];
+        [contentV setHg_y:[UIApplication statusBarHeight]];
         [self addSubview:contentV];
         return;
     }
@@ -154,7 +154,7 @@ NSInteger const BTN_RIGHT_TAG = 420;
             NSString *title = titles[i];
             CGSize titleSize = [TxtUtil calculateTextSizeWithText:title font:font];
             UIButton *btn = [self createBtnWithTitle:title font:font];
-            btn.frame = CGRectMake(x+btw*i, [UIScreen statusBarHeight], btw, btw);
+            btn.frame = CGRectMake(x+btw*i, [UIApplication statusBarHeight], btw, btw);
             btn.tag = BTN_LEFT_TAG + i;
             
             [btn addTarget:self action:@selector(leftActionSender:) forControlEvents:UIControlEventTouchUpInside];

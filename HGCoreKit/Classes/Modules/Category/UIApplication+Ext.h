@@ -13,6 +13,10 @@ NS_ASSUME_NONNULL_BEGIN
 @interface UIApplication (Ext)
 
 
+/// 状态栏高度
++ (CGFloat)statusBarHeight;
+/// 底部安全区域高度
++ (CGFloat)bottomSafeAreaHeight;
 /**
  当前正在显示的 viewController， 忽略模态弹出
  

@@ -15,16 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (BOOL)isiPhoneX;
 
-- (CGFloat)safeAreaHeight;
-+ (CGFloat)bottomSafeAreaHeight;
-
-/// 状态栏高度
-- (CGFloat)statusBarHeight;
-
 /// 导航栏高度
 + (CGFloat)navigationBarHeight;
-
-+ (CGFloat)statusBarHeight;
 
 + (CGFloat)naviHeight;
 
